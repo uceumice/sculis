@@ -1,0 +1,29 @@
+[{
+        "id": "M",
+        "name": "Mathematik"
+    },
+    {
+        "id": "E",
+        "name": "Englisch"
+    },
+    {
+        "id": "MU",
+        "name": "Musik"
+    },
+    {
+        "id": "SP",
+        "name": "Sport"
+    },
+    {
+        "id": "IF",
+        "name": "Informatik"
+    },
+    {
+        "id": "GZ",
+        "name": "Geschichte Zusatzkurs"
+    },
+    {
+        "id": "PH",
+        "name": "Physik"
+    }
+]

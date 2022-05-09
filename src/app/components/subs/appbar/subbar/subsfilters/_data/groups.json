@@ -1,0 +1,120 @@
+[{
+        "id": "M",
+        "group": [{
+                "id": "G1",
+                "name": "GK1"
+            },
+            {
+                "id": "G2",
+                "name": "GK2"
+            },
+            {
+                "id": "G3",
+                "name": "GK3"
+            },
+            {
+                "id": "L1",
+                "name": "LK1"
+            },
+            {
+                "id": "L2",
+                "name": "LK2"
+            }
+        ]
+    },
+    {
+        "id": "E",
+        "group": [{
+                "id": "G1",
+                "name": "GK1"
+            },
+            {
+                "id": "G2",
+                "name": "GK2"
+            },
+            {
+                "id": "G3",
+                "name": "GK3"
+            },
+            {
+                "id": "L1",
+                "name": "LK1"
+            },
+            {
+                "id": "L2",
+                "name": "LK2"
+            },
+            {
+                "id": "L3",
+                "name": "LK3"
+            }
+        ]
+    },
+    {
+        "id": "MU",
+        "group": [{
+            "id": "G1",
+            "name": "GK1"
+        }]
+    },
+    {
+        "id": "SP",
+        "group": [{
+                "id": "G1",
+                "name": "GK1"
+            },
+            {
+                "id": "G2",
+                "name": "GK2"
+            },
+            {
+                "id": "G3",
+                "name": "GK3"
+            },
+            {
+                "id": "G4",
+                "name": "GK4"
+            },
+            {
+                "id": "G5",
+                "name": "GK5"
+            }
+        ]
+    },
+    {
+        "id": "IF",
+        "group": [{
+                "id": "G1",
+                "name": "GK1"
+            },
+            {
+                "id": "G2",
+                "name": "GK2"
+            }
+        ]
+    },
+    {
+        "id": "GZ",
+        "group": [{
+                "id": "G1",
+                "name": "GK1"
+            },
+            {
+                "id": "G2",
+                "name": "GK2"
+            }
+        ]
+    },
+    {
+        "id": "PH",
+        "group": [{
+                "id": "G1",
+                "name": "GK1"
+            },
+            {
+                "id": "LK1",
+                "name": "LK1"
+            }
+        ]
+    }
+]
