@@ -14,7 +14,6 @@ const Subs = () => {
     const [dates, setDates] = useState<Date[] | null>(null);
     const [date, setDate] = useState<Date | null>(null);
 
-
     useEffect(
         () => {
             if (source) {

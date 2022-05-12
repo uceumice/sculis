@@ -52,6 +52,18 @@ const AppBar = (props: AppBarProps) => {
 
     let handleMenuClick = () => setMenu(!menu);
 
+    let _date = () => {
+        if (process.env.NODE_ENV === "production") {
+            if (props.date) {
+                return formatDate(props.date);
+            } else {
+                return <LoadingText length={16} typographyProps={{ sx: { opacity: .6 }, color: "white" }}></LoadingText>;
+            }
+        } else if (process.env.NODE_ENV === "development") {
+            return formatDate(new Date());
+        }
+    }
+
     return (
         <MUIAppBar style={{ position: "relative" }}>
             {menu ? <Menu /> : null}
@@ -70,14 +82,8 @@ const AppBar = (props: AppBarProps) => {
                                 marginLeft: "10px",
                                 background: (theme) => theme.custom.gradients.button
                             }}
-                            disabled={!props.date}
                         >
-                            {props.date ? (
-                                formatDate(props.date)
-                            ) : (
-                                <LoadingText length={16} typographyProps={{ sx: { opacity: .6 }, color: "white" }}></LoadingText>
-                            )
-                            }
+                            {_date()}
                         </Button>
                     </RowListExtended>
 
@@ -100,9 +106,10 @@ const AppBar = (props: AppBarProps) => {
 
                     dates={props.dates}
 
-                    date={props.date} setDate={(pDate: Date) => props.setDate(pDate)}
+                    date={props.date} setDate={props.setDate}
 
                     filters={props.filters} setFilters={props.setFilters}
+                    
                     nes={props.nes} setNES={props.setNES}
                 />
             </Container>
