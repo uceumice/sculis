@@ -31,7 +31,7 @@ const SubBar = (props: SubBarProps) => {
         >
             {
                 props.subbar === 'filter' ? (
-                    <SubsFilters filters={props.filters} setFilters={props.setFilters} nes={props.nes} setNES={props.setNES}/>
+                    <SubsFilters filters={props.filters} setFilters={props.setFilters} nes={props.nes} setNES={props.setNES} />
                 ) : props.subbar === 'date' ? (
                     <DatePicker
                         date={props.date}

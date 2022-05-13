@@ -18,17 +18,22 @@ import { RowListExtended } from '../../_coms/components';
 import { useState } from 'react';
 
 
-
+type AppBarProps = {
+    mode: number
+    setMode: Function
+}
 
 const AppBar = (props: any) => {
-    const [mode, setMode] = useState<number>(0);
-
     const refer = {
         0: "Day",
         1: "Week",
         2: "Month",
         3: "Year"
     }
+
+    const handleViewModeClick = () => {
+
+    };
 
     return (
         <MUIAppBar sx={{ position: "relative" }}>
@@ -45,9 +50,9 @@ const AppBar = (props: any) => {
                         <Button
                             variant="contained"
                             sx={{ marginLeft: "4px" }}
-                            onClick={() => setMode(mode == 3 ? 0 : mode + 1)}
+                            onClick={() => props.setMode(props.mode == 3 ? 0 : props.mode + 1)}
                         >
-                            {refer[mode]}
+                            {refer[props.mode]}
                         </Button>
                     </RowListExtended>
                     <RowListExtended>

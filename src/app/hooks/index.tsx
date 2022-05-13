@@ -1,4 +1,4 @@
-import { Dispatch, useEffect, useState, SetStateAction } from 'react';
+import { Dispatch, useEffect, useState, SetStateAction, useLayoutEffect } from 'react';
 
 function useLocalStorageState<S>(defaultValue: S | (() => S), key: string): [S, Dispatch<SetStateAction<S>>] {
     const [value, setValue] = useState<S>(() => {
@@ -41,5 +41,18 @@ function useThemeDetector() {
     return isDarkTheme;
 }
 
-export { useLocalStorageState, useSessionStorageState };
+function useWindowSize(): [number, number] {
+    const [size, setSize] = useState<[number, number]>([0, 0]);
+    useLayoutEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
+export { useLocalStorageState, useSessionStorageState, useWindowSize };
 
